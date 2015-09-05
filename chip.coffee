@@ -22,7 +22,9 @@ setup()
 
 ctx.scale(canvas.width/DATA_W, canvas.height/DATA_H)
 ctx.globalCompositeOperation = "copy"
+
 ctx.imageSmoothingEnabled = false
+ctx[x+"ImageSmoothingEnabled"] = false for x in 'moz webkit ms'.split(' ')
 
 draw = ->
   ctx.clearRect(0, 0, canvas.width, canvas.height)
